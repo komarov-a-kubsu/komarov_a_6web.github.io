@@ -47,8 +47,11 @@ function updatePrice() {
     let prodPrice = document.getElementById("result");
     let count = document.getElementsByName("count");
     console.log(Number(count[0].value));
-    if (count[0].value>0 && isNumeric(count[0].value)){
+    if (count[0].value > 0 && isNumeric(count[0].value) && count[0].value != null){
         prodPrice.value = Number(price) * Number(count[0].value);
+    }
+    else {
+        prodPrice.value="Something went wrong";
     }
 
 }
